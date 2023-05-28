@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Navbar{
+   height: 5rem;
+   position: fixed;
+   width: 100vw;
+}
+.Navbar ul {
+    display: flex;
+   justify-content: flex-end;
+   background-color: skyblue;
+   align-items: center;
+   height: 5rem;
+   column-gap: 1rem;
+   
+}
+.Navbar ul li{
+    list-style: none;
+    margin-right: 3rem;
+   
+}
+a{
+    text-decoration: none;
+    color: azure;
+}
+.Navbar ul li img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+    /* position: absolute;
+    right: 1%; */
+}
+.profileImages{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem
+}
+.profileImages button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #008CBA;
+    rotate: -90deg;
+   margin-left: 1rem;
+}
