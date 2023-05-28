@@ -19,9 +19,10 @@ const Register = () => {
    formData.append("password",password)
    try{
    const res= await axios.post("http://localhost:8000/api/register",formData)
+   alert(res.userData.message)
    navigate("/login")
    }catch(error){
-    console.log(error)
+    console.log(error.message)
    }
      
   }

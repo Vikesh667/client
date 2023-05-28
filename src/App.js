@@ -10,8 +10,8 @@ function App() {
     <>
      <Navbar/>
      <Routes>
+     <Route path='/' element={<Home/>}/>
       <Route element={<PrivateComponent/>}>
-      <Route path='/' element={<Home/>}/>
       <Route path='/about' element={<h1>about</h1>}/>
       <Route path='/course' element={<h1>course</h1>}/>
       <Route path='/profile' element={<Profile/>}/>

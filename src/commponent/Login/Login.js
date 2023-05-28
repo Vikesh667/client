@@ -17,9 +17,16 @@ const Login = () => {
                 }
             })  
             const data=await res.json()
-            localStorage.setItem("User",JSON.stringify(data))
-            alert(data.message)
-            navigate('/')
+            if(data){
+              alert(data.message)
+              localStorage.setItem("User",JSON.stringify(data))
+              navigate('/')
+            }else{
+              alert(data.message)
+            }
+           
+            
+          
          }catch(error){
           console.log(error.message)
          }

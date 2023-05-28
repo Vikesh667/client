@@ -42,8 +42,11 @@ a{
 .profileImages button{
     outline: none;
     border: none;
-    background-color: transparent;
-    color: #008CBA;
+    width: 2rem;
+    height: 3rem;
+    color: white;
+    border-radius: 5px;
+    background-color: red;
     rotate: -90deg;
-   margin-left: 1rem;
+    margin-left: 1rem;
 }

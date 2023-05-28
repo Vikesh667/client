@@ -1,9 +1,22 @@
-import React from 'react'
-
+import React, { useEffect, useState } from "react";
+import style from "../Home/Home.module.css";
 const Profile = () => {
-  return (
-    <div style={{position:"absolute",bottom:"50%",left:"50%"}}>Profile</div>
-  )
-}
+  let user = JSON.parse(localStorage.getItem("User"));
 
-export default Profile
+  return (
+    <div className={style.home}>
+    <div style={{display:"flex",flexDirection:"column"}}>
+      <img style={{height:"6rem",width:"6rem",borderRadius:"100%"}}
+        src={`http://localhost:8000/api/userImages/${user.userData.image}`}
+      />
+      <ul style={{ display: "flex", flexDirection: "column" }}>
+        <li>{user.userData.name}</li>
+        <li>{user.userData.email}</li>
+        <li>{user.userData.mobile}</li>
+      </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Profile;
