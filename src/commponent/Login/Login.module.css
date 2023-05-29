@@ -5,17 +5,20 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container form{
     display: flex;
     flex-direction: column;
-    border: 5px solid rgba(236, 233, 233, 0.616);
+    border: 1px solid #dddfe2;
     gap: 1rem;
     width: 40vw;
     height: 60vh;
     justify-content: center;
     align-items: center;
-    background-color:#aeccce;
+    background-color:#bdaece61;
     border-radius: 5px;
       
 }

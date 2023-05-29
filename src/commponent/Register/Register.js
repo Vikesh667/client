@@ -8,6 +8,7 @@ const Register = () => {
   const [mobile,setMobile]=useState("")
   const [password,setPassword]=useState("")
   const [image,setImage]=useState(null)
+  const [message,setMassage]=useState("")
   const navigate=useNavigate()
   const submitForm=async(e)=>{
    e.preventDefault()
@@ -19,8 +20,10 @@ const Register = () => {
    formData.append("password",password)
    try{
    const res= await axios.post("http://localhost:8000/api/register",formData)
-   alert(res.userData.message)
-   navigate("/login")
+   setMassage(res.data.message)
+   setTimeout(()=>{
+     navigate('/login')
+   },3000)
    }catch(error){
     console.log(error.message)
    }
@@ -47,9 +50,10 @@ const Register = () => {
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
             placeholder='Enter your password ' autoComplete='off'/>
-            <input type='file'  onChange={(e)=>setImage(e.target.files[0])}/>
+            <input type='file' onChange={(e)=>setImage(e.target.files[0])}/>
             <button type='submit'>Sign Up</button>
             <Link to="/login">Alreday have acoount ? Login</Link>
+            <p className={style.para}>{message}</p>
         </form>
     </div>
   )

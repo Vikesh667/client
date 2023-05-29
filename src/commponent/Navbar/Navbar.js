@@ -23,6 +23,12 @@ const Navbar = () => {
           <Link to="/course">Course</Link>
         </li>
         <li>
+          <Link to="/course">Contact Us</Link>
+        </li>
+        <li>
+          <Link to="/course">Services</Link>
+        </li>
+        <li>
           {auth ? (
             <span className={style.profileImages}>
               <p>{auth.userData.name}</p>

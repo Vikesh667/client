@@ -1,21 +1,24 @@
 .container{
-    background-color:#ffff;
+    /* background-color:#ffff; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    background-image: url("https://media.istockphoto.com/id/869283118/photo/register-online.jpg?s=612x612&w=0&k=20&c=G9FeU0sYw0pJMr3FKVuCqRqgOnqcupdDpbq5sqdqMRc=");
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 .container form{
     display: flex;
     flex-direction: column;
-    border: 5px solid rgba(236, 233, 233, 0.616);
+    border: 1px solid #44445073;
     gap: 1rem;
     width: 40vw;
-    height: 60vh;
+    height: 70vh;
     justify-content: center;
     align-items: center;
-    background-color:#aeccce;
+    background:#44445073;
     border-radius: 5px;
       
 }
@@ -23,8 +26,9 @@
     width: 18vw;
     height: 2rem;
     outline: none;
-    border: 1px solid skyblue;
+    border: 2px solid #44445073;
     border-radius: 5px;
+    color: #1d2129;
 }
 .container form button{
     width: 10rem;
@@ -42,4 +46,8 @@
     top: 15%;
     background-color: #008CBA;
 
+}
+.para{
+    color: green;
+    text-transform: capitalize;
 }
