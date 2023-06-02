@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import style from "./Navbar.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, json, useNavigate } from "react-router-dom";
 import LogoutIcon from '@mui/icons-material/Logout';
 import LoginIcon from '@mui/icons-material/Login';
 const Navbar = () => {
   const navigate = useNavigate();
   const auth = JSON.parse(localStorage.getItem("User"));
+  const admin=JSON.parse(localStorage.getItem("admin"))
   const handleLogout = () => {
     localStorage.clear();
     navigate("/login");
@@ -31,7 +32,7 @@ const Navbar = () => {
         <li>
           {auth ? (
             <span className={style.profileImages}>
-              <p>{auth.userData.name}</p>
+              <p>{auth.userData?.name}</p>
              <Link to='/profile'>
               <img
                 src={`http://localhost:8000/api/userImages/${auth.userData.image}`}
@@ -40,7 +41,10 @@ const Navbar = () => {
               <button onClick={handleLogout}><LogoutIcon/></button>
             </span>
           ) : (
+            <>
             <Link to="/login"><LoginIcon/></Link>
+            <Link to ='/admin'>Admin</Link>
+            </>
           )}
         </li>
       </ul>

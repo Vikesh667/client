@@ -47,6 +47,7 @@ const Login = () => {
             placeholder='Enter your password ' autoComplete='off'/>
             <button type='submit'>Sign Up</button>
             <Link to="/register">If you don't have acoount ? Register</Link>
+             <Link to='/resetPassword'><p>Forget Password</p> </Link>  
         </form>
     </div>
   )
